@@ -555,7 +555,7 @@ extension Koyomi: UICollectionViewDelegate {
         
         switch selectionMode {
         case .single(_), .multiple(_):
-            date   = model.date(at: indexPath)
+            date   = model.isSelect(with: indexPath) ? nil : model.date(at: indexPath)
             toDate = nil
             length = 1
             
